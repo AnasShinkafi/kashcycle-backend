@@ -19,6 +19,6 @@ export class WalletEntity {
     updated_at: Date;
 
     @OneToOne(() => UserEntity, userEntity => userEntity.wallet, { onDelete: 'CASCADE'})
-    @JoinColumn()
+    @JoinColumn() 
     user: UserEntity;
 }
